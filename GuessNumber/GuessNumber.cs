@@ -14,21 +14,21 @@ namespace GuessNumber
 
         public string Compare(string given, string guessed)
         {
+            if (given == guessed)
+            {
+                return "4A0B";
+            }
+
             int countOfSameNumberAtSamePosition = 0;
             for (int i = 0; i < 4; i++)
             {
                 if (given[i] == guessed[i])
                 {
-                    countOfSameNumberAtSamePosition ++;
+                    countOfSameNumberAtSamePosition++;
                 }
             }
 
-            if (countOfSameNumberAtSamePosition == 2)
-            {
-                return "2A0B";
-            }
-
-            return "0A4B";
+            return countOfSameNumberAtSamePosition.ToString() + @"A0B";
         }
     }
 }
