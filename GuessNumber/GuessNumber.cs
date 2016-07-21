@@ -19,7 +19,11 @@ namespace GuessNumber
                 return "4A0B";
             }
 
-            return GetCountOfSameCharForEachPositon(given, guessed).ToString() + "A" + "0B";
+            int countOfSameCharForEachPositon = GetCountOfSameCharForEachPositon(given, guessed);
+            int countOfCharsBothContains = GetCountOfCharsBothContains(given, guessed);
+
+            return countOfSameCharForEachPositon.ToString() + "A" + 
+                (countOfCharsBothContains - countOfSameCharForEachPositon) + "B";
         }
 
         private static int GetCountOfSameCharForEachPositon(string given, string guessed)

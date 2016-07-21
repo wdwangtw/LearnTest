@@ -40,5 +40,19 @@ namespace GuessNumber.Test
             int countOfCharsBothContains = guessNumber.GetCountOfCharsBothContains(given, guessed);
             Assert.Equal(countOfBothContain, countOfCharsBothContains);
         }
+
+        [Theory]
+        [InlineData("1234", "4321", "0A4B")]
+        [InlineData("1234", "1234", "4A0B")]
+        [InlineData("1264", "3246", "1A2B")]
+        [InlineData("1264", "6214", "2A2B")]
+        [InlineData("1234", "7835", "1A0B")]
+        [InlineData("1234", "5678", "0A0B")]
+        void return_correct_result(string given, string guessed, string expect)
+        {
+            GuessNumber guessNumber = new GuessNumber();
+            string result = guessNumber.Compare(given, guessed);
+            Assert.Equal(expect, result);
+        }
     }
 }
