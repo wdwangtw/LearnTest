@@ -8,5 +8,8 @@ Get 2A*B when the given number and guessed number have 2 same number for each po
 
 Get nA*B when the given number and guessed number have 'n' same number in the every position. Last case will be deleted.
 
+Get number of characters which both in given number and guessed number.
+
+Get correct result.
 
 AC 02 Generate random number that must be right fommat.

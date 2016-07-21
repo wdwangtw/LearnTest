@@ -19,6 +19,11 @@ namespace GuessNumber
                 return "4A0B";
             }
 
+            return GetCountOfSameCharForEachPositon(given, guessed).ToString() + "A" + "0B";
+        }
+
+        private static int GetCountOfSameCharForEachPositon(string given, string guessed)
+        {
             int countOfSameNumberAtSamePosition = 0;
             for (int i = 0; i < 4; i++)
             {
@@ -28,7 +33,7 @@ namespace GuessNumber
                 }
             }
 
-            return countOfSameNumberAtSamePosition.ToString() + @"A0B";
+            return countOfSameNumberAtSamePosition;
         }
     }
 }

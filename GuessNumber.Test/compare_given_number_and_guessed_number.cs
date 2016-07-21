@@ -27,5 +27,16 @@ namespace GuessNumber.Test
             string patten = countOfN.ToString() + @"A\dB";
             Assert.True(Regex.IsMatch(result, patten));
         }
+
+        [Theory]
+        [InlineData("1234", "4321", 4)]
+        [InlineData("1234", "1256", 2)]
+        [InlineData("1264", "3246", 3)]
+        [InlineData("1234", "7835", 1)]
+        [InlineData("1234", "5678", 0)]
+        void return_number_of_characters_which_both_in_givenNumber_and_in_guessedNumber(string given, string guessed, int countOfBothContain)
+        {
+            Assert.True(true);
+        }
     }
 }
