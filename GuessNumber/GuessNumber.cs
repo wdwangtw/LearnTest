@@ -35,5 +35,10 @@ namespace GuessNumber
 
             return countOfSameNumberAtSamePosition;
         }
+
+        public int GetCountOfCharsBothContains(string given, string guessed)
+        {
+            return given.ToList().Intersect(guessed.ToList()).Count();
+        }
     }
 }
