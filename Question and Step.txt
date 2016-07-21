@@ -1,0 +1,12 @@
+电脑随机产生一个数字不重复的四位数。你每次猜一个四位数电脑会将你提交的数与它自动产生的数进行比较，结果显示成"*A*B"。A代表位置正确数字也正确，B代表数字正确但位置不正确。
+
+AC 01 Verify two numbers and give right result.
+
+Get 4A0B when the given number and guessed number are total same, whoes every position of number is the same.
+
+Get 2A*B when the given number and guessed number have 2 same number in the every position.
+
+Get nA*B when the given number and guessed number have 'n' same number in the every position. Last case will be deleted.
+
+
+AC 02 Generate random number that must be right fommat.

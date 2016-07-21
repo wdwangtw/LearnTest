@@ -12,9 +12,9 @@ namespace GuessNumber
         {
         }
 
-        public bool TestForXunit()
+        public string Compare(string given, string guessed)
         {
-            return true;
+            return "0A4B";
         }
     }
 }
