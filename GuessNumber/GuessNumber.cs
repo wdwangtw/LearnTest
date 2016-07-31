@@ -8,9 +8,7 @@ namespace GuessNumber
 {
     public class GuessNumber
     {
-        static void Main(string[] args)
-        {
-        }
+        
 
         public string Compare(string given, string guessed)
         {
