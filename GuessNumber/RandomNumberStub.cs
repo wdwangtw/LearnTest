@@ -2,14 +2,16 @@
 {
     public class RandomNumberStub : IRandomNumber
     {
+        private string[] numbers = null;
+        private int curIndex = 0;
         public string GetNext()
         {
-            throw new System.NotImplementedException();
+            return numbers[curIndex ++];
         }
 
         public void SetNumbers(string[] numbers)
         {
-            throw new System.NotImplementedException();
+            this.numbers = numbers;
         }
     }
 }

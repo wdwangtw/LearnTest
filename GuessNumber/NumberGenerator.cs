@@ -1,4 +1,6 @@
-﻿namespace GuessNumber
+﻿using System.Linq;
+
+namespace GuessNumber
 {
     public class NumberGenerator
     {
@@ -6,7 +8,20 @@
 
         public string GenerateNumber()
         {
-            throw new System.NotImplementedException();
+            string number = null;
+            while (true)
+            {
+                number = Generator.GetNext();
+                if (number.Length == 3)
+                {
+                    number = "0" + number;
+                }
+
+                if (number.ToCharArray().Distinct().Count() == 4)
+                    break;
+            }
+
+            return number;
         }
     }
 }

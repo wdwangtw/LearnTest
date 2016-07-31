@@ -4,8 +4,6 @@ namespace GuessNumber
 {
     public class GuessNumber
     {
-        
-
         public string Compare(string given, string guessed)
         {
             if (given == guessed)
