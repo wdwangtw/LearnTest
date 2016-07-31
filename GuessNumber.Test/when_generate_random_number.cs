@@ -10,7 +10,7 @@ namespace GuessNumber.Test
             NumberGenerator numberGenerator = new NumberGenerator();
 
             RandomNumberStub generator = new RandomNumberStub();
-            generator.SetNumbers(new string[] { "0120", "234", "1595", "1234", "4321" });
+            generator.SetNumbers(new string[] { "120", "1595", "1234", "4321" });
             numberGenerator.Generator = generator;
 
             Assert.Equal("1234", numberGenerator.GenerateNumber());
