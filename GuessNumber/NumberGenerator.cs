@@ -4,14 +4,18 @@ namespace GuessNumber
 {
     public class NumberGenerator
     {
-        public IRandomNumber Generator { get; set; }
+        private IRandomNumber generator;
+        public NumberGenerator(IRandomNumber generator)
+        {
+            this.generator = generator;
+        }
 
         public string GenerateNumber()
         {
             string number = null;
             while (true)
             {
-                number = Generator.GetNext();
+                number = generator.GetNext();
                 if (number.Length == 3)
                 {
                     number = "0" + number;

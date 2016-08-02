@@ -4,8 +4,7 @@
     {
         public Game()
         {
-            NumberGenerator numberGenerator = new NumberGenerator();
-            numberGenerator.Generator = new RandomNumber();
+            NumberGenerator numberGenerator = new NumberGenerator(new RandomNumber());
         }
 
         static void Main(string[] args)
