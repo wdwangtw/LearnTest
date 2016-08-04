@@ -43,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FancyConsole.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="IFancyConsole.cs" />
     <Compile Include="IRandomNumber.cs" />
+    <Compile Include="MockFancyConsole.cs" />
     <Compile Include="NumberGenerator.cs" />
     <Compile Include="GuessNumber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

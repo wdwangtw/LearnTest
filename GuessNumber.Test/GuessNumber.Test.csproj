@@ -59,6 +59,7 @@
     <Compile Include="compare_given_number_and_guessed_number.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="when_generate_random_number.cs" />
+    <Compile Include="when_run_the_game.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

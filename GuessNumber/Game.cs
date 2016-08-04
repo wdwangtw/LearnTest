@@ -1,4 +1,6 @@
-﻿namespace GuessNumber
+﻿using System;
+
+namespace GuessNumber
 {
     public class Game
     {
