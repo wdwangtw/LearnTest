@@ -8,7 +8,7 @@ namespace GuessNumber
         private NumberGenerator numberGenerator;
         private GuessNumber guessNumber;
 
-        public Game(IRandomNumber randomNumber, MockFancyConsole fancyConsole)
+        public Game(IRandomNumber randomNumber, IFancyConsole fancyConsole)
         {
             this.fancyConsole = fancyConsole;
             numberGenerator = new NumberGenerator(randomNumber);
@@ -17,7 +17,8 @@ namespace GuessNumber
 
         static void Main(string[] args)
         {
-            Console.WriteLine(string.Format(".You have {0} time(s) left.", 5));
+            Game game = new Game(new RandomNumber(), new FancyConsole());
+            game.Run();
         }
 
         public void Run()
