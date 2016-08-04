@@ -1,35 +1,40 @@
 using System;
+using System.Collections.Generic;
 
 namespace GuessNumber
 {
     public class MockFancyConsole : IFancyConsole
     {
-        private string numberFromRead = null;
-        private string statusFromWrite = null;
+        private string[] inputNumbers = null;
+        private int indexOfRead = 0;
+        private string outputStatus = string.Empty;
+
+
         public string ReadLine()
         {
-            if (numberFromRead != null)
+            if (inputNumbers != null)
             {
-                return numberFromRead;
+                return inputNumbers[indexOfRead++];
             }
             throw new NotImplementedException();
         }
 
         public void WriteLine(string status)
         {
-            statusFromWrite = status;
+            outputStatus += status;
+            outputStatus += "\n";
         }
 
-        public void WhenCallReadLineWillReturnNumber(string number)
+        public void WhenCallReadLineWillReturnNumbers(string[] numbers)
         {
-            numberFromRead = number;
+            inputNumbers = numbers;
         }
 
         public string WhenCalledWriteLineInputStatus()
         {
-            if (statusFromWrite != null)
+            if (outputStatus != null)
             {
-                return statusFromWrite;
+                return outputStatus;
             }
             throw new NotSupportedException("Have not call WriteLine");
         }
