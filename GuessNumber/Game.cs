@@ -4,9 +4,14 @@ namespace GuessNumber
 {
     public class Game
     {
-        public Game()
+        private IFancyConsole fancyConsole;
+        private IRandomNumber randomNumber;
+
+
+        public Game(IRandomNumber randomNumber, MockFancyConsole fancyConsole)
         {
-            NumberGenerator numberGenerator = new NumberGenerator(new RandomNumber());
+            this.randomNumber = randomNumber;
+            this.fancyConsole = fancyConsole;
         }
 
         static void Main(string[] args)
@@ -14,5 +19,9 @@ namespace GuessNumber
 
         }
 
+        public void Run()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

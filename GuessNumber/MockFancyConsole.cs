@@ -2,7 +2,7 @@ using System;
 
 namespace GuessNumber
 {
-    class MockFancyConsole : IFancyConsole
+    public class MockFancyConsole : IFancyConsole
     {
         private string numberFromRead = null;
         private string statusFromWrite = null;
@@ -20,12 +20,12 @@ namespace GuessNumber
             statusFromWrite = status;
         }
 
-        public void WhenCallReadLineReturnNumber(string number)
+        public void WhenCallReadLineWillReturnNumber(string number)
         {
             numberFromRead = number;
         }
 
-        public string WhenCallWriteLineInputStatus()
+        public string WhenCalledWriteLineInputStatus()
         {
             if (statusFromWrite != null)
             {

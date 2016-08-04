@@ -1,3 +1,4 @@
+using System.Text;
 using Xunit;
 
 namespace GuessNumber.Test
@@ -7,7 +8,16 @@ namespace GuessNumber.Test
         [Fact]
         void should_return_OK()
         {
-            
+            MockFancyConsole mockFancyConsole = new MockFancyConsole();
+            mockFancyConsole.WhenCallReadLineWillReturnNumber("1234");
+
+            RandomNumberStub randomNumberStub = new RandomNumberStub();
+            randomNumberStub.SetNumbers(new [] {"1234"});
+
+            Game game = new Game(randomNumberStub, mockFancyConsole);
+            game.Run();
+
+            Assert.Equal("Bingo!", mockFancyConsole.WhenCalledWriteLineInputStatus());
         }
     }
 }
