@@ -17,7 +17,7 @@ namespace GuessNumber.Test
             Game game = new Game(randomNumberStub, mockFancyConsole);
             game.Run();
 
-            Assert.Equal("Bingo!", mockFancyConsole.WhenCalledWriteLineInputStatus());
+            Assert.Equal("4A0B", mockFancyConsole.WhenCalledWriteLineInputStatus());
         }
     }
 }

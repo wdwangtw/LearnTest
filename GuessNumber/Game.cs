@@ -5,13 +5,15 @@ namespace GuessNumber
     public class Game
     {
         private IFancyConsole fancyConsole;
-        private IRandomNumber randomNumber;
+        private NumberGenerator numberGenerator;
+        private GuessNumber guessNumber;
 
 
         public Game(IRandomNumber randomNumber, MockFancyConsole fancyConsole)
         {
-            this.randomNumber = randomNumber;
             this.fancyConsole = fancyConsole;
+            numberGenerator = new NumberGenerator(randomNumber);
+            guessNumber = new GuessNumber();
         }
 
         static void Main(string[] args)
@@ -21,7 +23,9 @@ namespace GuessNumber
 
         public void Run()
         {
-            throw new NotImplementedException();
+            string given = numberGenerator.GenerateNumber();
+            string guessed = fancyConsole.ReadLine();
+            fancyConsole.WriteLine(guessNumber.Compare(given, guessed));
         }
     }
 }
