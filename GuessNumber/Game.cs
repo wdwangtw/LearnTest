@@ -4,6 +4,8 @@ namespace GuessNumber
 {
     public class Game
     {
+
+
         private IFancyConsole fancyConsole;
         private NumberGenerator numberGenerator;
         private GuessNumber guessNumber;
